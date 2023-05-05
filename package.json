@@ -1,0 +1,17 @@
+{
+  "name": "tindev-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:francisdiasbr/tindev-backend.git",
+  "author": "Francis Dias <francisdiasbr@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
