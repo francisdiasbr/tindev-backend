@@ -1,5 +1,17 @@
+const axios = require('axios')
+
 module.exports = {
-  store(req, res) {
-    return res.json({ ok: true });
+  async store(req, res) {
+    console.log(req.body.username)
+    // com desestruturaçào
+    const { username } = req.body;
+
+    // axios é assincrono
+    const response = await axios.get(`https://api.github.com/users/${username}`)
+
+    // console no objeto data retornado pelo axios
+    console.log(response.data);
+
+    return res.json(response.data);
   }
 }
