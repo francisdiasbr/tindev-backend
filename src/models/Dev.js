@@ -11,11 +11,19 @@ const DevSchema = new Schema({
   },
   bio: String,
   avatar: {
-    type: String,
+    type: String, //armazena o endereço da imagem
     required: true,
   },
+  likes: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Dev',
+  }],
+  dislikes: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Dev',
+  }],
 }, {
-  timestamps: true
+  timestamps: true //objeto de configuração que cria as colunas createdAt e updatedAt
 });
 
 module.exports = model('Dev', DevSchema);
