@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0.p4nyeac.mongodb.net/tindev?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0.p4nyeac.mongodb.net/devs?retryWrites=true&w=majority', { useNewUrlParser: true });
 
 //por padrão, o Express não vem com o entendimento de JSON. Incluir:
 app.use(express.json());
